@@ -1,0 +1,36 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags%}
+
+{% block body %}
+<div class="row">
+
+    <div class="col s3"></div>
+        <div class="col s12 m6">
+          <div class="card">
+               
+            <div class="card-content">
+<div class="row">
+        <span class="card-title">Login to Nutritius</span>
+        <form class="col s12" method="POST">
+         {% csrf_token%}
+
+         {{form|crispy}}
+         
+          <input type="submit" class="btn waves-effect waves-light" name="action">
+               <p>Forgot password <span><a href=""> Recover Account</a></span></p>
+              </button>
+         
+        </form>
+      </div>   </div>
+           
+          </div>
+        </div>
+        <div class="col s3"></div>
+      </div>
+
+
+
+
+
+
+      {% endblock %}

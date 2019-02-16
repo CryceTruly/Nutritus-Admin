@@ -1,0 +1,13 @@
+__pycache__  
+
+ users/__pycache__
+ nutritiusserver/foods/__pycache__
+
+  nutritiusserver/__pycache__/
+  nutritiusserver/nutritiusserver/__pycache__/
+nutritiusserver/__pycache__/settings.cpython-37.pyc
+  *__pycache__/**
+
+  venv/*
+
+   venv/
