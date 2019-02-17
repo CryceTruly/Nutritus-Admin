@@ -6,12 +6,20 @@ from .models import Nutrients
 from rest_framework.views import APIView
 from .serializers import NutrientsSerializer
 from rest_framework.response import Response
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
 # Create your views here.
 import json
 
 @login_required
 def index(request):
-    return render(request,'foods/home.html')
+    
+    context = {
+        'data': Nutrients.objects.all()
+    }
+    return render(request,'foods/home.html',context)
+
+def create(request):
+    return render(request,'foods/new.html')
 
 
 class NutrientsList(APIView):
@@ -37,4 +45,9 @@ class NutrientsDetail(APIView):
         nutrients=get_object_or_404(Nutrients,pk=pk)
         data=NutrientsSerializer(nutrients).data
         return Response(data)
+
+
+class FoodCreate(CreateView):
+    model=Nutrients
+    fields='__all__'
 
