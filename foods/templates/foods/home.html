@@ -1,4 +1,43 @@
-<h2>Welcome home</h2>
 
-<a href="{% url 'logout' %}">Logout</a>
+{% extends 'users/base.html' %}
+
+{% block body %}
+<div class="container">
+
+<table>
+                <thead>
+                        <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Nutrients</th>
+        
+                                </tr>
+                </thead>
+        
+                <tbody>
+                                {% for food in data %}
+                                <tr> 
+                                        <td>{{food.name}}</td>
+                                        <td>{{food.description}}</td>
+                                        <td>{{food.nutrients}}</td>
+                                
+                                </tr>
+                        
+                          
+                            {% endfor %}
+                </tbody>
+        </table>
+
+</div>
+  
+</ul>
+
+       
+
+      
+
+       
+
+{% endblock %}
+
 
