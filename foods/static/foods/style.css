@@ -1,0 +1,28 @@
+
+nav {
+    color: #fff;
+    background-color: #1976D2;
+  }
+  
+  nav .brand-logo {
+    color: #000;
+    font-size: 20px;
+  }
+  
+  nav ul a {
+    color: #fff;
+  }
+  
+  nav .nav-wrapper {
+      padding-left: 40px;
+  }
+  
+  .btn{
+    background: #1976D2 !important;
+    color: #fff;
+
+  }
+
+  input:focus{
+    border-bottom-color: #1976D2 !important;
+  }
