@@ -9,8 +9,9 @@ nutritiusserver/__pycache__/
 nutritiusserver/nutritiusserver/__pycache__/
 nutritiusserver/__pycache__/settings.cpython-37.pyc
 *__pycache__/**
-
+venv
 venv/*
 .vscode/
 venv/
 .gitignore
+venv
