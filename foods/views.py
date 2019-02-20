@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from .serializers import NutrientsSerializer
 from rest_framework.response import Response
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.views.generic import DetailView
 # Create your views here.
 import json
 
@@ -50,4 +51,10 @@ class NutrientsDetail(APIView):
 class FoodCreate(CreateView):
     model=Nutrients
     fields='__all__'
+class FoodDetail(DetailView):
+    model = Nutrients
 
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+      
+        return data 
