@@ -1,7 +1,7 @@
 __pycache__  
 venv/*
 venv/
-
+venv
 users/__pycache__
 nutritiusserver/foods/__pycache__
 

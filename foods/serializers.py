@@ -5,4 +5,3 @@ class NutrientsSerializer(serializers.ModelSerializer):
     class Meta:
         model=Nutrients
         fields='__all__'
-
