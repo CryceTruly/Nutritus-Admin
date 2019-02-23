@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Nutrients
@@ -12,23 +12,14 @@ from django.views.generic import DetailView, ListView
 import json
 
 
-@login_required
-def index(request):
-
-    context = {
-        'data': Nutrients.objects.all()
-    }
-    return render(request, 'foods/home.html', context)
-
-
-class FoodListView(ListView):
+class FoodListView(LoginRequiredMixin, ListView):
     model = Nutrients
     template_name = 'foods/home.html'
     context_object_name = 'data'
     ordering = ['name']
 
 
-class FoodDetail(DetailView):
+class FoodDetail(LoginRequiredMixin, DetailView):
     model = Nutrients
 
 
