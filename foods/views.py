@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from .models import Nutrients
@@ -28,6 +29,7 @@ class FoodDelete(LoginRequiredMixin, DeleteView):
     success_url = '/'
 
 
+@login_required()
 def create(request):
     return render(request, 'foods/new.html')
 
