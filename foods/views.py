@@ -23,6 +23,11 @@ class FoodDetail(LoginRequiredMixin, DetailView):
     model = Nutrients
 
 
+class FoodDelete(LoginRequiredMixin, DeleteView):
+    model = Nutrients
+    success_url = '/'
+
+
 def create(request):
     return render(request, 'foods/new.html')
 

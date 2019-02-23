@@ -2,7 +2,9 @@
 {% block body %}
 <div class="container">
 
-    <h3>Food Details</h3>
+    <span style="font-size:26px;padding: 20px;">Food Details</span>
+    <a href="{% url 'del-food' object.id %}"> <i class="material-icons right-align">delete</i></a>
+
     <hr>
     <div class="row">
         <div class="col s12 m6">
