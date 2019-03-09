@@ -15,8 +15,9 @@ urlpatterns = [
     path("api/nutrients/<int:pk>/",
          NutrientsDetail.as_view(), name="nutrient_detail"),
 
-    path("foodstoavoid/", FoodsToAvoidView.as_view(), name='foodstoavoid'),
-    path("foodstoavoid/<int:pk>/", FoodToAvoidView.as_view(), name='foodtoavoid'),
+    path("api/foodstoavoid/", FoodsToAvoidView.as_view(), name='foodstoavoid'),
+    path("api/foodstoavoid/<int:pk>/",
+         FoodToAvoidView.as_view(), name='foodtoavoid'),
 
 
 ]
