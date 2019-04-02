@@ -98,3 +98,15 @@ class FoodToAvoidView(APIView):
         food = get_object_or_404(FoodsToAvoid, pk=pk)
         data = FoodsToAvoidSerializer(food).data
         return Response(data)
+
+
+class FoodToAvoidDelete(LoginRequiredMixin, DeleteView):
+    model = FoodsToAvoid
+    success_url = '/'
+
+
+class FoodsToAvoidSiteView(LoginRequiredMixin, ListView):
+    model = FoodsToAvoid
+    template_name = 'foods/foodstoavoid.html'
+    context_object_name = 'data'
+    ordering = ['name']

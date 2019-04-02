@@ -26,6 +26,8 @@
         {% if user.is_authenticated %}
         <li><a href="{% url 'fcreate' %}">New Food</a></li>
 
+        <li><a href="{% url 'ftafoods' %}">Foods To Avoid</a></li>
+
         <li><a href="{% url 'logout' %}">Logout</a> {{user.username}}</li>
         {% else %}
 

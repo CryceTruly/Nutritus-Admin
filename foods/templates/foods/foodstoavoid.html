@@ -1,0 +1,40 @@
+{% extends 'users/base.html' %}
+
+{% block body %}
+<div class="container">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Reason</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for food in data %}
+            <tr>
+                <td>{{food.name}}</td>
+                <td>{{food.reason}}</td>
+<td><a href="{% url 'del-foodtoavoid' food.id %}"> <i class="material-icons">delete</i></a>
+</td>
+
+            </tr>
+
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+</ul>
+
+
+
+
+
+
+
+{% endblock %}
