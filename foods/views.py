@@ -11,8 +11,12 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView, ListView
 # Create your views here.
 import json
+from django.shortcuts import redirect
 
-
+def delete_food(request, pk):
+    food = FoodsToAvoid.objects.get(pk=pk)
+    food.delete()
+    return redirect('ftafoods')
 class FoodListView(LoginRequiredMixin, ListView):
     model = Nutrients
     template_name = 'foods/home.html'
@@ -66,6 +70,12 @@ class NutrientsDetail(APIView):
 class FoodCreate(CreateView):
     model = Nutrients
     fields = '__all__'
+
+
+class FoodToAvoidCreate(CreateView):
+    model = FoodsToAvoid
+    fields = '__all__'
+    success_url = '/ftafoods'
 
 
 class FoodsToAvoidView(APIView):
