@@ -16,3 +16,4 @@ venv/
 .gitignore
 venv
 venv
+.env
