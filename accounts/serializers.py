@@ -15,7 +15,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
       def create(self, validated_data):
             fullname=validated_data['first_name']+" "+validated_data['last_name']
-            user = User.objects.create_user(validated_data['username'], 
+            user = User.objects.create_user(validated_data['username'],
             validated_data['email'], validated_data['password'])
             return user
 
@@ -29,4 +29,3 @@ class LoginSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
         raise serializers.ValidationError('Incorrect credentials')
-        
