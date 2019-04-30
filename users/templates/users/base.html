@@ -24,7 +24,7 @@
       <a href="{% url 'home'%}" class="brand-logo" style="color: aliceblue;">Nutritius</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {% if user.is_authenticated %}
-        <li><a href="{% url 'fcreate' %}">New Food</a></li>
+        <li><a href="{% url 'fcreate' %}">New Recommended Food</a></li>
 
         <li><a href="{% url 'ftafoods' %}">Foods To Avoid</a></li>
 

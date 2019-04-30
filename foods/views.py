@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from rest_framework import status, viewsets
 from django.shortcuts import get_object_or_404
-from .models import Nutrients, FoodsToAvoid
+from .models import RecommendedFood, FoodsToAvoid
 from rest_framework.views import APIView
 from .serializers import NutrientsSerializer, FoodsToAvoidSerializer
 from rest_framework.response import Response
@@ -18,18 +18,18 @@ def delete_food(request, pk):
     food.delete()
     return redirect('ftafoods')
 class FoodListView(LoginRequiredMixin, ListView):
-    model = Nutrients
+    model = RecommendedFood
     template_name = 'foods/home.html'
     context_object_name = 'data'
     ordering = ['name']
 
 
 class FoodDetail(LoginRequiredMixin, DetailView):
-    model = Nutrients
+    model = RecommendedFood
 
 
 class FoodDelete(LoginRequiredMixin, DeleteView):
-    model = Nutrients
+    model = RecommendedFood
     success_url = '/'
 
 
@@ -40,7 +40,7 @@ def create(request):
 
 class NutrientsList(APIView):
     def get(self, request):
-        nutrients = Nutrients.objects.all()
+        nutrients = RecommendedFood.objects.all()
         serializer = NutrientsSerializer(nutrients, many=True)
         return Response(serializer.data)
 
@@ -61,14 +61,13 @@ class NutrientsList(APIView):
 
 class NutrientsDetail(APIView):
     def get(self, request, pk):
-        nutrients = get_object_or_404(Nutrients, pk=pk)
+        nutrients = get_object_or_404(RecommendedFood, pk=pk)
         data = NutrientsSerializer(nutrients).data
-
         return Response(data)
 
 
 class FoodCreate(CreateView):
-    model = Nutrients
+    model = RecommendedFood
     fields = '__all__'
 
 
@@ -113,7 +112,6 @@ class FoodToAvoidView(APIView):
 class FoodToAvoidDelete(LoginRequiredMixin, DeleteView):
     model = FoodsToAvoid
     success_url = '/'
-
 
 class FoodsToAvoidSiteView(LoginRequiredMixin, ListView):
     model = FoodsToAvoid
