@@ -1,3 +1,6 @@
-from django.contrib import admin
+from django.contrib.admin import AdminSite
 
-# Register your models here.
+
+class MyAdminSite(AdminSite):
+    # Disable View on Site link on admin page
+    site_url = None

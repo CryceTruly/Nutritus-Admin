@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Nutrients, FoodsToAvoid
+from .models import RecommendedFood, FoodsToAvoid
 
 
 class NutrientsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Nutrients
+        model = RecommendedFood
         fields = '__all__'
 
 
