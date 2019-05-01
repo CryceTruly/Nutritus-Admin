@@ -10,7 +10,7 @@ admin.site.site_header = 'Nutritius'
 
 urlpatterns = [
     path('', admin.site.urls),
-    path('dashboard/', include('foods.urls'), name='home'),
+    path('', include('foods.urls'), name='home'),
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('', include('accounts.urls')),
