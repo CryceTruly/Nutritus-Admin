@@ -20,7 +20,7 @@ pycodestyle==2.5.0
 pycparser==2.19
 pylint==2.2.2
 pyOpenSSL==19.0.0
-pytz==2018.9
+pytz==2019.2
 six==1.12.0
 whitenoise==4.1.2
 wrapt==1.11.1
