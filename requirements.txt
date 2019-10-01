@@ -18,7 +18,7 @@ Pillow==5.4.1
 psycopg2-binary==2.7.7
 pycodestyle==2.5.0
 pycparser==2.19
-pylint==2.2.2
+pylint==2.4.2
 pyOpenSSL==19.0.0
 pytz==2018.9
 six==1.12.0
