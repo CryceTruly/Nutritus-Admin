@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+asn1crypto = "==0.24.0"
+autopep8 = "*"
+django = "*"
+django-crispy-forms = "*"
+django-heroku = "*"
+django-rest-knox = "*"
+djangorestframework = "*"
+gunicorn = "*"
+pep8 = "*"
+psycopg2-binary = "*"
+pyopenssl = "*"
+pillow = "*"
+
+[requires]
+python_version = "3.7"
