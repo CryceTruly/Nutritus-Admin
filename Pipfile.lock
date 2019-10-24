@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1fb7ba574f35654f71b18b4cb6c251fa46d2c080a9b412978860458800024466"
+            "sha256": "5c579f1cce39a13caa3e3eca950c3dcc29a8a7d731f3750827a2eb6f64bec722"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,11 +18,11 @@
     "default": {
         "asn1crypto": {
             "hashes": [
-                "sha256:2f1adbb7546ed199e3c90ef23ec95c5cf3585bac7d11fb7eb562a3fe89c64e87",
-                "sha256:9d5c20441baf0cb60a4ac34cc447c6c189024b6b4c6cd7877034f4965c464e49"
+                "sha256:7bb1cc02a5620b3d72da4ba070bda2f44f0e61b44dee910a302eddff802b6fb5",
+                "sha256:87620880a477123e01177a1f73d0f327210b43a3cdbd714efcd2fa49a8d7b384"
             ],
             "index": "pypi",
-            "version": "==0.24.0"
+            "version": "==1.2.0"
         },
         "autopep8": {
             "hashes": [
@@ -253,7 +253,6 @@
         },
         "pycparser": {
             "hashes": [
-                "sha256:5bc6f5ece628be972dedb7d7f316aa84af5c6540f1abeb8ba43b7bccf6eb0612",
                 "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
             ],
             "version": "==2.19"
